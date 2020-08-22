@@ -1,0 +1,126 @@
+﻿<Window x:Class="WPF_sandobx.ConfColorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_sandobx"
+        mc:Ignorable="d"
+        Title="Settings" Height="600" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+
+
+
+
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="BackgroundColor">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Name="Rectangle1" Fill="#000000" Grid.Column="3" Grid.RowSpan="2"/>
+                <Slider Name="BackgroudRedSlider"  IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="BackgroudRedSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
+                <Slider Name="BackgroundGreenSlider" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="BackgroundGreenSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="1" />
+                <Slider Name="BackgroundBlueSlider" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="BackgroundBlueSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="2"/>
+                <TextBox Name="textbox1" Grid.Row="1" Text="{Binding ElementName=BackgroudRedSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                <TextBox Name="textbox2" Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=BackgroundGreenSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="textbox2_TextChanged"/>
+                <TextBox Name="textbox3" Grid.Row="1" Grid.Column="2" Text="{Binding ElementName=BackgroundBlueSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="textbox3_TextChanged"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Header="FillingColor">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Name="Rectangle2" Fill="#FFFFFF" Grid.Column="3" Grid.RowSpan="2"/>
+                <Slider Name="ForegroudRedSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="255" ValueChanged="ForegroudRedSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
+                <Slider Name="ForegroundGreenSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="255" ValueChanged="ForegroundGreenSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="1" />
+                <Slider Name="ForegroundBlueSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="255" ValueChanged="ForegroundBlueSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="2"/>
+                <TextBox Name="textbox4" TextChanged="textbox4_TextChanged" Grid.Row="1" Text="{Binding ElementName=ForegroudRedSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <TextBox Name="textbox5" TextChanged="textbox5_TextChanged"  Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=ForegroundGreenSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox Name="textbox6" TextChanged="textbox6_TextChanged" Grid.Row="1" Grid.Column="2" Text="{Binding ElementName=ForegroundBlueSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="0" Grid.Row="1" Header="StrokeColor">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Name="Rectangle3" Fill="Black" Grid.Column="3" Grid.RowSpan="2"/>
+                <Slider Name="StrokeRedSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="0" ValueChanged="StrokeRedSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
+                <Slider Name="StrokeGreenSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="0" ValueChanged="StrokeGreenSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="1" />
+                <Slider Name="StrokeBlueSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="0" ValueChanged="StrokeBlueSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="2"/>
+                <TextBox Name="textbox7" TextChanged="textbox7_TextChanged" Grid.Row="1" Text="{Binding ElementName=StrokeRedSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <TextBox Name="textbox8" TextChanged="textbox8_TextChanged" Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=StrokeGreenSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox Name="textbox9" TextChanged="textbox9_TextChanged" Grid.Row="1" Grid.Column="2" Text="{Binding ElementName=StrokeBlueSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="SelectColor">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Name="Rectangle4" Fill="Red" Grid.Column="3" Grid.RowSpan="2"/>
+                <Slider Name="SelectRedSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="255" ValueChanged="SelectRedSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center"/>
+                <Slider Name="SelectGreenSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="0" ValueChanged="SelectGreenSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="1" />
+                <Slider Name="SelectBlueSlider" IsSnapToTickEnabled="True" TickFrequency="1" Value="0" ValueChanged="SelectBlueSlider_ValueChanged" Orientation="Vertical" Minimum="0" Maximum="255" HorizontalAlignment="Center" Grid.Column="2"/>
+                <TextBox Name="textbox10" TextChanged="textbox10_TextChanged" Grid.Row="1" Text="{Binding ElementName=SelectRedSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <TextBox Name="textbox11" TextChanged="textbox11_TextChanged" Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=SelectGreenSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox Name="textbox12" TextChanged="textbox12_TextChanged" Grid.Row="1" Grid.Column="2" Text="{Binding ElementName=SelectBlueSlider,Path=Value}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+
+
+
+        
+        <Button  Name="OkButton" Grid.Row="3" IsDefault="True" Content="Ok" Click="OkButton_Click" Margin="35" />
+        <Button Grid.Column="1" Grid.Row="3" Name="CancelButton" IsCancel="True" Content="Cancel" Margin="35" Click="CancelButton_Click"  />
+
+    </Grid>
+
+
+</Window>
