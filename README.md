@@ -1,5 +1,5 @@
 # VisualSorting
-Visualization of differents data-sorting algorithms 
+# Visualization of differents data-sorting algorithms 
 <!DOCTYPE html> 
 <html> 
 <head> 
