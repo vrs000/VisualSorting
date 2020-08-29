@@ -3,15 +3,6 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<title></title>
-	<style type="text/css">
-		p{
-			text-align: center;
-		}
-		img{
-			width: 75%;
-		}
-	</style> 
 </head>
 <body> 
 	<p>
