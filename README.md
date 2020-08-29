@@ -5,17 +5,14 @@
 <head> 
 	<title></title>
 	<style type="text/css">
-		p
-		{
+		p{
 			text-align: center;
 		}
-		img
-		{
+		img{
 			width: 75%;
 		}
 	</style> 
 </head>
-
 <body> 
 	<p>
 		<p><h2>Fist start</h2></p>
