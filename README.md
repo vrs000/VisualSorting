@@ -1,12 +1,11 @@
-# VisualSorting
-# Visualization of differents data-sorting algorithms 
+# VisualSorting | Visualization of differents data-sorting algorithms 
 <!DOCTYPE html> 
 <html> 
 <head> 
 </head>
 <body> 
 	<p>
-		<p><h2>Fist start</h2></p>
+		<p><h2>First start</h2></p>
 		<p><img src="images/1.PNG"></p>
 	</p>
 	<p>
@@ -34,5 +33,4 @@
 		<p><img src="images/QuickSort.gif"></p>
 	</p>
 </body> 
-
 </html>
